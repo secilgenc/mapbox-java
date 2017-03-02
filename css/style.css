@@ -4,13 +4,6 @@
   padding-top: 20px;
 }
 
-/* Add buffer for nicer anchor links */
-.prose h3:target,
-.prose h2:target,
-.prose h1:target {
-  padding-top: 60px;
-}
-
 /* Header gets bigger */
 @media only screen and (max-width:640px) {
   .prose h2:target {
@@ -19,6 +12,14 @@
   .prose h3:target {
     padding-top: 120px;
   }
+}
+
+.custom-content {
+  position: fixed;
+  top: 50px;
+  overflow-y: scroll;
+  display: inline-block;
+  bottom: 0;
 }
 
 strong {

@@ -172,7 +172,7 @@ var App = React.createClass({
 
 
       {/* Header */ }
-      <div className={`fill-denim z100  dark bottom-shadow fixed-top pad1y pad2x`}>
+      <div className={`fill-denim z100 dark bottom-shadow fixed-top pad1y pad2x`}>
         <a href='/' className={`active space-top1 space-left1 pin-topleft icon round dark mapbox pad0 ${brandClasses}`}></a>
         <div className={`strong small
           ${queryMatches.mobile ? 'space-left3' : ''}
@@ -205,7 +205,7 @@ var App = React.createClass({
       </div>
 
       {/* Content background */ }
-      {(!col1 && !queryMatches.mobile) && <div className={`fixed-top fixed-right ${queryMatches.desktop && 'space-left16'}`}>
+      {(!col1 && !queryMatches.mobile) && <div className={`custom-content fixed-top fixed-right ${queryMatches.desktop && 'space-left16'}`}>
         <div className='fill-light col6 pin-right'></div>
       </div>}
 
@@ -217,12 +217,14 @@ var App = React.createClass({
           ast={ast} />
       </div>}
 
+
+
       {/* Content */ }
       <div className={`${queryMatches.desktop && 'space-left16'}`}>
-        <div className={col1 ? 'col8 margin1' : ''}>
+        <div className={col1 ? 'margin1 custom-content' : 'custom-content'}>
           <Content
-            leftClassname={col1 ? 'space-bottom4 pad2x prose clip' : 'space-bottom8 col6 pad2x prose clip'}
-            rightClassname={col1 ? 'space-bottom2 pad2 prose clip fill-light space-top5' : 'space-bottom4 col6 pad2 prose clip fill-light space-top5'}
+            leftClassname={col1 ? 'col8 space-bottom4 pad2x prose clip' : 'space-bottom8 col6 pad2x prose clip'}
+            rightClassname={col1 ? 'col8 space-bottom2 pad2 prose clip fill-light space-top5' : 'space-bottom4 col6 pad2 prose clip fill-light space-top5'}
             ast={ast}
             language={this.state.language}/>
         </div>
