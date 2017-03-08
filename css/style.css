@@ -22,6 +22,46 @@
   bottom: 0;
 }
 
+input[type=text] {
+  height: 30px;
+  padding:5px;
+  width: 250px;
+}
+
+.navbar {
+  margin-left: 160px;
+}
+
+.navbar ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+  line-height: 50px;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+
+    text-decoration: none;
+}
+
+.navbar li:first-child {
+    padding-left: 25px;
+}
+
+.nav-button {
+  display: block;
+  position: relative;
+}
+
+
 strong {
   font-weight: bold;
 }

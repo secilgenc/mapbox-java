@@ -133,11 +133,11 @@ var App = React.createClass({
     this.state.mqls.forEach(q => q.removeListener(this.mediaQueryChanged));
     document.body.removeEventListener('scroll', this.onScroll);
   },
-  onChangeLanguage(language) {
-    this.setState({ language }, () => {
+  onNavButtonClick(item) {
+    this.setState({ item }, () => {
       if (window.history) {
         window.history.pushState(null, null,
-          `?${qs.stringify({ language: language.title })}${window.location.hash}`);
+          `?${qs.stringify({ item: item.title })}${window.location.hash}`);
       }
     });
   },
@@ -170,16 +170,19 @@ var App = React.createClass({
     let col1 = columnMode === 1 && queryMatches.desktop;
     return (<div className='container unlimiter'>
 
-
       {/* Header */ }
-      <div className={`fill-denim z100 dark bottom-shadow fixed-top pad1y pad2x`}>
+      <div className={`fill-denim z100 dark width16 bottom-shadow fixed-top pad1y pad2x`}>
+
         <a href='/' className={`active space-top1 space-left1 pin-topleft icon round dark mapbox pad0 ${brandClasses}`}></a>
         <div className={`strong small
           ${queryMatches.mobile ? 'space-left3' : ''}
-          ${queryMatches.tablet ? 'space-left2' : 'space-left4 line-height15 width16' }`}>
+          ${queryMatches.tablet ? 'space-left2' : 'space-left4 line-height15' }`}>
           {queryMatches.desktop ? brandNames.desktop :
             queryMatches.mobile ? brandNames.mobile : brandNames.tablet}
         </div>
+        </div>
+
+        <div className={`fill-denim navbar z100 dark fixed-top`}>
         {queryMatches.tablet && <div>
           <button
             onClick={this.toggleNav}
@@ -194,14 +197,30 @@ var App = React.createClass({
                 ast={ast} />
             </div>}
           </div>}
-          <div className='pin-topright space-top1 space-right1 pad0'>
+
+
+          <div className={'col6 bottom-shadow'}>
+          <ul className={'strong nav-button small'}>
+          <li><a href='#'>Maps SDK</a></li>
+          <li><a href='#'>Mapbox Java</a></li>
+          </ul>
+          </div>
+
+<div className={'col6 pad2x pad0 space-top1 space-right1 pin-topright'}>
+
+<div className={'pin-right'}>
+          <input type="text"></input>
+
+
             {queryMatches.desktop ?
               <a
                 title={`Display as ${col1 ? 2 : 1} column`}
                 onClick={this.toggleColumnMode}
                 style={{ cursor: 'pointer' }}
-                className={`icon quiet caret-${col1 ? 'right' : 'left'} fill-lighten1 pad0 round`}></a> : null}
+                className={`icon quiet space-left3 fr caret-${col1 ? 'right' : 'left'} fill-lighten1 pad0 round`}></a> : null}
           </div>
+
+      </div>
       </div>
 
       {/* Content background */ }

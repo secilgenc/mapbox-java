@@ -8,9 +8,9 @@ import hljs from 'highlight.js/lib/highlight';
  * media queries.
  */
 module.exports.brandNames = {
-  desktop: 'Mapbox Java Documentation',
-  tablet: 'Mapbox Java Docs',
-  mobile: 'Java Docs'
+  desktop: 'Android Documentation',
+  tablet: 'Android Docs',
+  mobile: 'Android Docs'
 };
 
 /**
