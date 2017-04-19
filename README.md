@@ -2,7 +2,7 @@
 
 Mapbox Android Services contains directions, geocoding, and many more APIs to use inside your Android or Java application. This repository holds the source code for the project and is divided into several modules to make it easier for developers to only include the dependencies needed for their project.
 
-**Note**: Where'd navigation go? You'll find it in the [mapbox-navigation-android](https://github.com/mapbox/mapbox-navigation-android) repo.
+**Note**: Where did the Navigation SDK go? The Mapbox Navigation SDK for Android [has graduated into its own repository.](https://github.com/mapbox/mapbox-navigation-android) repo.
 
 ## Getting Started
 
