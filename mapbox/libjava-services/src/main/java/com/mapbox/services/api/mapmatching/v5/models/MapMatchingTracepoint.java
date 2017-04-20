@@ -52,4 +52,41 @@ public class MapMatchingTracepoint extends DirectionsWaypoint {
   public void setWaypointIndex(int waypointIndex) {
     this.waypointIndex = waypointIndex;
   }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    if (!super.equals(o)) {
+      return false;
+    }
+
+    MapMatchingTracepoint that = (MapMatchingTracepoint) o;
+
+    if (getMatchingsIndex() != that.getMatchingsIndex()) {
+      return false;
+    }
+    return getWaypointIndex() == that.getWaypointIndex();
+
+  }
+
+  @Override
+  public int hashCode() {
+    int result = 17;
+    result = 31 * result + getMatchingsIndex();
+    result = 31 * result + getWaypointIndex();
+    return result;
+  }
+
+  @Override
+  public String toString() {
+    return "MapMatchingTracepoint{"
+      + "matchingsIndex=" + matchingsIndex
+      + ", waypointIndex=" + waypointIndex
+      + '}';
+  }
 }
