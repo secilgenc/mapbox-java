@@ -1,5 +1,7 @@
 [![Build Status](https://www.bitrise.io/app/a7eea7d04be1e2e5.svg?token=OruuJNhnjyeRnlBv0wXsFQ&branch=master)](https://www.bitrise.io/app/a7eea7d04be1e2e5) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.mapbox.mapboxsdk/mapbox-android-services/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.mapbox.mapboxsdk/mapbox-android-services)
 
+[![](https://raw.githubusercontent.com/mapbox/mapbox-java/master/.github/splash-img.png)](https://www.mapbox.com/android-docs/mapbox-services/)](https://www.mapbox.com/android-docs/mapbox-services/2.1.0/getting-started/)
+
 Mapbox Android Services contains directions, geocoding, and many more APIs to use inside your Android or Java application. This repository holds the source code for the project and is divided into several modules to make it easier for developers to only include the dependencies needed for their project.
 
 **Note**: Where did the Navigation SDK go? The Mapbox Navigation SDK for Android [has graduated into its own repository.](https://github.com/mapbox/mapbox-navigation-android) repo.
